@@ -34,6 +34,11 @@ public class PollStatistics {
     }
 
     public void printanswers(String[] answers) {
+        for ( int i = 0; i < 4; i++) { // 번호별 답 출력하기
+            System.out.print(answers[i] + ",");
+        }
+
+
         System.out.println(Arrays.toString(answers)); //답 출력
     }
 }
