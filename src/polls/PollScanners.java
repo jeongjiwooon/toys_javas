@@ -22,7 +22,7 @@ public class PollScanners
                 {
                     System.out.println();
                     answer = myObj.nextInt();
-                    answer = answer - 1;
+                    answer = answer - 1; // 배열 = 0, 1, 2 순서니까 입력값에서 - 1
                     System.out.print("답) "+polls[1][answer]);
                     answers[count] = answer;
                     count ++; // count 변수 + 1
