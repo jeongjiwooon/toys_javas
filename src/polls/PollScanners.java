@@ -12,6 +12,7 @@ public class PollScanners
         PollInitialArrays pollInitialArrays = new PollInitialArrays();
         String[][] polls = pollInitialArrays.getPolls(); // InitialArrays 파일에서 polls 불러오기
         int answer = 0;
+        int[] answers = new int[4];
         for (int first = 0; first < polls.length; first++)
         {
             for (int second = 0; second < polls[first].length; second++)
@@ -23,9 +24,10 @@ public class PollScanners
                     answer = myObj.nextInt();
                     answer = answer - 1;
                     System.out.print("답) "+polls[1][answer]);
+                    answers[count] = answer;
                     count ++; // count 변수 + 1
                     PollStatistics pollStatistics = new PollStatistics();
-                    pollStatistics.getNum(count, answer);
+                    pollStatistics.getNum(count, answers, name);
                 }
             }
             System.out.println();
