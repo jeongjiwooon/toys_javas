@@ -6,15 +6,13 @@ public class PollStatistics
     Scanner myObj = new Scanner(System.in);
     PollInitialArrays pollInitialArrays = new PollInitialArrays();
     String[][] polls = pollInitialArrays.getPolls();
-    int count = 0;
-    public void getNum()
+    public void getNum(int count, int answer) // PollScanner 파일에서 선언한 count, answer 변수 불러오기
     {
         PollScanners pollScanners = new PollScanners();
-        System.out.println();
-
-                if (count >= 4)
-                {
-                    System.out.println("입력 개수가 4개 이상이므로 종료합니다.");
-                }
+        if (count == 4) // 모든 질문과 답이 끝나면~ 이라는 명령어 추가
+        {
+            System.out.println(); // 최종으로 모든 입력값 출력 예정
+            System.out.println("최종답) "+polls[1][answer]);
+        }
     }
 }

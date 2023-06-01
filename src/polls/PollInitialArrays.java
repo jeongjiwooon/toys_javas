@@ -14,7 +14,7 @@ public class PollInitialArrays {
         };
 
         // 추가 작업이 필요한 경우 작성
-        public String[][] getPolls(){
+        public String[][] getPolls(){ // getPolls에 polls값 리턴받기
         return polls;
         }
 }
