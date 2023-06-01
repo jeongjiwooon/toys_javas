@@ -1,48 +1,20 @@
 package polls;
 import java.util.Scanner;
-import java.util.Arrays;
 
-//문항과답항이 있는 항목 , 임의로 받은 답항 5개 변수 2개 만들고
-// 파라미터로 문항과 클라이언트에서 받은 항목을 2개로 넘겨야한다. print해야함 
-// 1번에 1번 2번문항에 2번째 프린트, 3번항목에 3번받은거 
+public class PollStatistics
+{
+    Scanner myObj = new Scanner(System.in);
+    PollInitialArrays pollInitialArrays = new PollInitialArrays();
+    String[][] polls = pollInitialArrays.getPolls();
+    int count = 0;
+    public void getNum()
+    {
+        PollScanners pollScanners = new PollScanners();
+        System.out.println();
 
-
-// Scanner scanner = new Scanner(System.in);
-// System.out.print("이름을 입력하세요: ");
-// String name = scanner.nextLine();
-
-// PollStatistics pollStatistics = new PollStatistics(name);
-// pollStatistics.printName();
-// }
-
-
-public class PollStatistics {
-
-
-    String [] answers = {"1","2","3","4"}; //임의 답 배열 
-    private String name; 
-
-    public PollStatistics(){
-    }
-
-    public PollStatistics(String name){ 
-        this.name = name;
-    }
-
-    public void printName(){
-        System.out.println("입력한 이름: " + name); //이름 출력
-    }
-
-    public void printanswers(String[] answers) {
-        for ( int i = 0; i < 4; i++) { // 번호별 답 출력하기
-            System.out.print(answers[i] + ",");
-        }
-
-
-        System.out.println(Arrays.toString(answers)); //답 출력
+                if (count >= 4)
+                {
+                    System.out.println("입력 개수가 4개 이상이므로 종료합니다.");
+                }
     }
 }
-
-// main에서
-//  pollStats.printName(); 
-//  pollStats.printanswers(answers); 
